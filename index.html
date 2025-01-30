@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        #orderButton {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        #orderButton:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        #foodItems {
+            margin: 20px 0;
+        }
+        input[type="checkbox"] {
+            margin: 10px;
+        }
+        label {
+            font-size: 18px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        #foodImage {
+            display: none;
+            margin-top: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #orderId {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Order Your Favorite Food</h1>
+    <button id="orderButton">Order Food</button>
+    <div id="foodItems">
+        <input type="checkbox" id="burger" name="foodItem" value="Burger">
+        <label for="burger">Burger</label>
+        <input type="checkbox" id="fries" name="foodItem" value="Fries">
+        <label for="fries">Fries</label>
+        <input type="checkbox" id="drink" name="foodItem" value="Drink">
+        <label for="drink">Drink</label>
+    </div>
+    <img id="foodImage" src="" alt="Food">
+    <div id="orderId">Order ID: <span id="orderIdValue"></span></div>
+    <script src="./index.js"></script>
+</body>
+</html>
